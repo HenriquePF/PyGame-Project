@@ -1,5 +1,5 @@
 import pygame
-from random import randint
+from random import randrange
 
 #Colors for the game
 white = (255, 255, 255)
@@ -41,10 +41,10 @@ def apple(posX, posY):
 def game():
     exit = True
     fimDeJogo = False
-    posX = randint(0, (largura - tamanho) / 10) * 10
-    posY = randint(0, (altura - tamanho) / 10) * 10
-    appleX = randint(0, (largura - tamanho) / 10) * 10
-    appleY = randint(0, (altura - tamanho) / 10) * 10
+    posX = randrange(0, largura - tamanho, 10)
+    posY = randrange(0, altura - tamanho, 10)
+    appleX = randrange(0, largura - tamanho, 10)
+    appleY = randrange(0, altura - tamanho, 10)
     velocidadeX = 0
     velocidadeY = 0
     CobraXY = []
@@ -61,7 +61,16 @@ def game():
                     fimDeJogo = False
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_c:
-                        game()
+                        exit = True
+                        fimDeJogo = False
+                        posX = randrange(0, largura - tamanho, 10)
+                        posY = randrange(0, altura - tamanho, 10)
+                        appleX = randrange(0, largura - tamanho, 10)
+                        appleY = randrange(0, altura - tamanho, 10)
+                        velocidadeX = 0
+                        velocidadeY = 0
+                        CobraXY = []
+                        CobraComp = 1
                     if event.key == pygame.K_e:
                         exit = False
                         fimDeJogo = False
@@ -84,53 +93,55 @@ def game():
                     velocidadeX = 0
                     velocidadeY = tamanho
 
+        if exit:
+            fundo.fill(black)
+            posX += velocidadeX
+            posY += velocidadeY
 
-        fundo.fill(black)
-        posX += velocidadeX
-        posY += velocidadeY
+            if posX == appleX and posY == appleY:
+                appleX = randrange(0, largura - tamanho, 10)
+                appleY = randrange(0, altura - tamanho, 10)
+                CobraComp += 2
 
-        CobraInicio = []
+            # No border
+            # if posX > largura:
+            #     posX = 0
+            # if posX < 0:
+            #     posX = largura - tamanho
+            #
+            # if posY > altura:
+            #     posY = 0
+            # if posY < 0:
+            #     posY = altura - tamanho
 
-        CobraInicio.append(posX)
-        CobraInicio.append(posY)
-        CobraXY.append(CobraInicio)
-        if len(CobraXY) > CobraComp:
-            del CobraXY[0]
-        if any (Bloco == CobraInicio for Bloco in CobraXY[:-1]):
-            fimDeJogo = True
+            # With border
+            if posX > largura:
+                fimDeJogo = True
+            if posX < 0:
+                fimDeJogo = True
+
+            if posY > altura:
+                fimDeJogo = True
+            if posY < 0:
+                fimDeJogo = True
+
+            CobraInicio = []
+
+            CobraInicio.append(posX)
+            CobraInicio.append(posY)
+            CobraXY.append(CobraInicio)
+            if len(CobraXY) > CobraComp:
+                del CobraXY[0]
+            if any (Bloco == CobraInicio for Bloco in CobraXY[:-1]):
+                fimDeJogo = True
 
 
 
-        cobra(CobraXY)
-        if posX == appleX and posY == appleY:
-            appleX = randint(0, (largura - tamanho) / 10) * 10
-            appleY = randint(0, (altura - tamanho) / 10) * 10
-            CobraComp += 2
+            cobra(CobraXY)
 
-        apple(appleX, appleY)
-        pygame.display.update()
-        relogio.tick(20)
-        #No border
-        # if posX > largura:
-        #     posX = 0
-        # if posX < 0:
-        #     posX = largura - tamanho
-        #
-        # if posY > altura:
-        #     posY = 0
-        # if posY < 0:
-        #     posY = altura - tamanho
-
-        #With border
-        if posX > largura:
-            fimDeJogo = True
-        if posX < 0:
-            fimDeJogo = True
-
-        if posY > altura:
-            fimDeJogo = True
-        if posY < 0:
-            fimDeJogo = True
+            apple(appleX, appleY)
+            pygame.display.update()
+            relogio.tick(20)
 
 game()
 pygame.quit()
