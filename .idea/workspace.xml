@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78d40868-154d-4dda-853c-e569f7a54dc7" name="Default Changelist" comment="" />
+    <list default="true" id="78d40868-154d-4dda-853c-e569f7a54dc7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PygameProject1.py" beforeDir="false" afterPath="$PROJECT_DIR$/PygameProject1.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PygameProject1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+            <state relative-caret-position="27">
+              <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -31,6 +35,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>text</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -38,9 +50,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="739" />
-    <option name="y" value="27" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="790" />
+    <option name="y" value="82" />
     <option name="width" value="801" />
     <option name="height" value="873" />
   </component>
@@ -64,6 +76,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -120,15 +133,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="27" width="1545" height="873" extended-state="6" />
+    <frame x="790" y="82" width="801" height="873" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.21282402" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.16508795" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991881" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2890095" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39891452" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -151,8 +165,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PygameProject1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        <state relative-caret-position="27">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
